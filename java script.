@@ -1,1 +1,105 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// -------------------------------
+// MODELO: Clase Niño
+// -------------------------------
+class Nino {
+    private String nombre;
+    private int edad;
+    private String estado;
+
+    public Nino(String nombre, int edad, String estado) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "\n--- Información del niño ---" +
+               "\nNombre: " + nombre +
+               "\nEdad: " + edad +
+               "\nEstado: " + estado;
+    }
+}
+
+// -------------------------------
+// GESTOR: Control de datos
+// -------------------------------
+class GestorOrfanato {
+    private ArrayList<Nino> listaNinos = new ArrayList<>();
+
+    public void registrarNino(String nombre, int edad, String estado) {
+        listaNinos.add(new Nino(nombre, edad, estado));
+        System.out.println("\n✔ Niño registrado exitosamente.");
+    }
+
+    public void mostrarNinos() {
+        if (listaNinos.isEmpty()) {
+            System.out.println("\n⚠ No hay niños registrados.");
+            return;
+        }
+
+        System.out.println("\n📋 Lista de niños registrados:");
+        for (Nino nino : listaNinos) {
+            System.out.println(nino);
+        }
+    }
+}
+
+// -------------------------------
+// MAIN: Menú principal
+// -------------------------------
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        GestorOrfanato gestor = new GestorOrfanato();
+
+        int opcion;
+
+        do {
+            System.out.println("\n==============================");
+            System.out.println("    ORFANATOS MEDELLÍN");
+            System.out.println("==============================");
+            System.out.println("1. Registrar niño");
+            System.out.println("2. Ver lista de niños");
+            System.out.println("3. Salir");
+            System.out.print("Elige una opción: ");
+
+            opcion = entrada.nextInt();
+            entrada.nextLine();  // limpiar buffer
+
+            switch (opcion) {
+                case 1:
+                    System.out.print("Nombre del niño: ");
+                    String nombre = entrada.nextLine();
+
+                    System.out.print("Edad: ");
+                    int edad = entrada.nextInt(); 
+                    entrada.nextLine();
+
+                    System.out.print("Estado (salud/bienestar): ");
+                    String estado = entrada.nextLine();
+
+                    gestor.registrarNino(nombre, edad, estado);
+                    break;
+
+                case 2:
+                    gestor.mostrarNinos();
+                    break;
+
+                case 3:
+                    System.out.println("\n Saliendo del sistema...");
+                    break;
+
+                default:
+                    System.out.println("\n Opción no válida.");
+            }
+
+        } while (opcion != 3);
+
+        entrada.close();
+    }
+}
 
