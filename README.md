@@ -6,7 +6,7 @@ Medellín, Colombia
 Contacto: 305 3952664 — juandavidvillamizar345@gmail.com
 
 ## Descripción del proyecto
-Portafolio personal (landing page) que presenta información personal, habilidades y un proyecto destacado llamado "Orfanatos Medellín". Está desarrollado con HTML, CSS y Bootstrap.
+Portafolio personal (landing page) que presenta información personal, habilidades y un proyecto destacado llamado "Orfanatos Medellín". Está desarrollado con HTML, CSS y Git y GitHub.
 
 ## Tecnologías utilizadas
 - HTML5
