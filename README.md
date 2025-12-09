@@ -31,7 +31,7 @@ mi-portafolio/
 │   ├── galeria-2.jpg
 │   └── ...                    # (Más imágenes usadas en el proyecto)
 │
-├── js/                        # Scripts opcionales (si en el futuro agregas JS)
+├── js/                        # Scripts opcionales (si en el futuro agrego JS)
 │   └── script.js              # Archivo JavaScript (opcional)
 │
 └── assets/                    # Recursos adicionales (íconos, archivos)
