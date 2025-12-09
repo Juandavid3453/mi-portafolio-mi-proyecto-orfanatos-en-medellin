@@ -11,7 +11,29 @@ Portafolio personal (landing page) que presenta información personal, habilidad
 ## Tecnologías utilizadas
 - HTML5
 - CSS3
-- Bootstrap 5
+- Git y GitHub
 - (Imágenes y assets locales en /img)
 
 ## Estructura del proyecto
+
+mi-portafolio/
+│
+├── index.html                 # Página principal del portafolio
+├── README.md                  # Documentación del proyecto
+│
+├── css/                       # Estilos del sitio
+│   └── style.css              # Archivo CSS principal
+│
+├── img/                       # Imágenes utilizadas en el portafolio
+│   ├── foto-perfil.jpg
+│   ├── proyecto-orfanatos.jpg
+│   ├── galeria-1.jpg
+│   ├── galeria-2.jpg
+│   └── ...                    # (Más imágenes usadas en el proyecto)
+│
+├── js/                        # Scripts opcionales (si en el futuro agregas JS)
+│   └── script.js              # Archivo JavaScript (opcional)
+│
+└── assets/                    # Recursos adicionales (íconos, archivos)
+    └── ...                   
+
